@@ -1,13 +1,10 @@
-<!doctype html>
-<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
-<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
-<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<!DOCTYPE html>
+<html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>jQuery Wookmark Plug-in Example</title>
+  <title>Cute_Girls_in_Aizu</title>
   <meta name="description" content="An very basic example of how to use the Wookmark jQuery plug-in.">
   <meta name="author" content="Christoph Ono, Sebastian Helzle">
 
@@ -18,6 +15,14 @@
 
   <!-- Global CSS for the page and tiles -->
   <link rel="stylesheet" href="../css/main.css">
+
+  <!-- Lightbox -->
+  <link rel="stylesheet" type="text/css" href="../resource/lightbox.css" media="screen,tv" />
+  <script type="text/javascript" charset="UTF-8" src="../resource/lightbox_plus.js"></script>
+
+  <!-- Bootstrap -->
+  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+
 
   <!-- Specific CSS for the example -->
   <style>
@@ -38,7 +43,7 @@
 
   <div id="container">
     <header>
-      <h1>jQuery Wookmark Plug-in Example</h1>
+    <h1>jQuery Wookmark Plug-in Example</h1>
       <p>The items with the 'stamped' descriptions keep their positions even if they are defined out of order in the code.</p>
       <p>Each number in the descriptions represent their real index in the html code.</p>
       <p>You can stamp the first item to the right by setting the direction option to 'right'.</p>
@@ -48,72 +53,73 @@
     <div id="main" role="main">
 
       <ul id="tiles">
-        <li>
-          <img src="../sample-images/1.jpg" width="200">
+        <li><a href="../sample-images/1.jpg" rel="lightbox">
+          <img src="../sample-small-images/1.jpg" width="200">
           <p>(1)</p>
+        </a>
         </li>
         <li class="stamped-last">
-          <img src="../sample-images/2.jpg" width="200">
+          <img src="../sample-small-images/2.jpg" width="200">
           <p>(2) Stamped to be the last!</p>
         </li>
         <li>
-          <img src="../sample-images/3.jpg" width="200">
+          <img src="../sample-small-images/3.jpg" width="200">
           <p>(3)</p>
         </li>
         <li class="stamped-first">
-          <img src="../sample-images/4.jpg" width="200">
+          <img src="../sample-small-images/4.jpg" width="200">
           <p>(4) Stamped to be the first!</p>
         </li>
         <li>
-          <img src="../sample-images/5.jpg" width="200">
+          <img src="../sample-small-images/5.jpg" width="200">
           <p>(5)</p>
         </li>
         <li>
-          <img src="../sample-images/6.jpg" width="200">
+          <img src="../sample-small-images/6.jpg" width="200">
           <p>(6)</p>
         </li>
         <li>
-          <img src="../sample-images/7.jpg" width="200">
+          <img src="../sample-small-images/7.jpg" width="200">
           <p>(7)</p>
         </li>
         <li class="stamped-fourth">
-          <img src="../sample-images/8.jpg" width="200">
+          <img src="../sample-small-images/8.jpg" width="200">
           <p>(8) Stamped to be the fourth!</p>
         </li>
         <li>
-          <img src="../sample-images/9.jpg" width="200">
+          <img src="../sample-small-images/9.jpg" width="200">
           <p>(9)</p>
         </li>
         <li>
-          <img src="../sample-images/10.jpg" width="200">
+          <img src="../sample-small-images/10.jpg" width="200">
           <p>(10)</p>
         </li>
         <li>
-          <img src="../sample-images/11.jpg" width="200">
+          <img src="../sample-small-images/11.jpg" width="200">
           <p>11</p>
         </li>
         <li>
-          <img src="../sample-images/12.jpg" width="200">
+          <img src="../sample-small-images/12.jpg" width="200">
           <p>(12)</p>
         </li>
         <li>
-          <img src="../sample-images/13.jpg" width="200">
+          <img src="../sample-small-images/13.jpg" width="200">
           <p>(13)</p>
         </li>
         <li>
-          <img src="../sample-images/14.jpg" width="200">
+          <img src="../sample-small-images/14.jpg" width="200">
           <p>(14)</p>
         </li>
         <li>
-          <img src="../sample-images/15.jpg" width="200">
+          <img src="../sample-small-images/15.jpg" width="200">
           <p>(15)</p>
         </li>
         <li>
-          <img src="../sample-images/16.jpg" width="200">
+          <img src="../sample-small-images/16.jpg" width="200">
           <p>(16)</p>
         </li>
         <li>
-          <img src="../sample-images/17.jpg" width="200">
+          <img src="../sample-small-images/17.jpg" width="200">
           <p>(17)</p>
         </li>
       </ul>
@@ -169,7 +175,11 @@
         $handler.wookmark(options);
       });
 })(jQuery);
+
 </script>
+<!--     // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    // Include all compiled plugins (below), or include individual files as needed
+    // <script src="js/bootstrap.min.js"></script> -->
 
 </body>
 </html>
