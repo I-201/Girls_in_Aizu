@@ -20,11 +20,6 @@
   <link rel="stylesheet" type="text/css" href="./resource/lightbox.css" media="screen,tv" />
   <script type="text/javascript" charset="UTF-8" src="./resource/lightbox_plus.js"></script>
 
-  <!-- Bootstrap -->
-  <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
-
-
-  <!-- Specific CSS for the example -->
   <style>
     /**
      * Grid items
@@ -41,9 +36,33 @@
 
 <body>
 
+  <div class="wrapper">
+    <!--content-->
+    <div id="open-sb" class="menu-icon menu-button menu-left"><img src="simple-sidebar/118.png" alt=""></div>
+  </div>
+  
+  <section class="sidebar">
+
+    <style type="text/css">
+      .sidebar {
+        background-color:   #2a2a2a;
+        color: white;
+        /*font-size: 20px;*/
+        /*text-align: left;*/
+
+      }
+    </style>
+
+    <!--content-->
+    <ul style="list-style-type: none">
+      <li>Garelly</li>
+      <h3>Staff</h3>
+    </ul>
+  </section>
+
   <div id="container">
     <header>
-    <h1>會津美人</h1>
+    <!-- <h1>會津美人</h1> -->
      <!--
       <p>The items with the 'stamped' descriptions keep their positions even if they are defined out of order in the code.</p>
       <p>Each number in the descriptions represent their real index in the html code.</p>
@@ -296,9 +315,28 @@
 })(jQuery);
 
 </script>
-<!--     // <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    // Include all compiled plugins (below), or include individual files as needed
-    // <script src="js/bootstrap.min.js"></script> -->
+
+ <!-- simple-sidebar -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+<script src="simple-sidebar/dist/jquery.simplesidebar.min.js"></script>
+
+  <script>
+    $( ".sidebar" ).simpleSidebar({
+      settings: {
+        opener: "#open-sb",
+        wrapper: ".wrapper",
+        animation: {
+          easing: "easeOutQuint"
+        }
+      },
+      sidebar: {
+        align: "left",
+        width: 200,
+        closingLinks: 'a',
+      }
+    });
+  </script>
 
   </body>
   </html>
