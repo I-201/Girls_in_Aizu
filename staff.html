@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html class="no-js" lang="ja"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>會津美人</title>
+  <meta name="description" content="會津美人は福島県会津若松市にある会津大学短期大学部の美女を紹介するウェブサイトです。">
+  <meta name="author" content="楡井優希">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- CSS Reset -->
+  <link rel="stylesheet" href="./css/reset.css">
+
+  <!-- Global CSS for the page and tiles -->
+  <link rel="stylesheet" href="./css/main.css">
+
+  <!-- Lightbox -->
+  <link rel="stylesheet" type="text/css" href="./resource/lightbox.css" media="screen,tv" />
+  <script type="text/javascript" charset="UTF-8" src="./resource/lightbox_plus.js"></script>
+
+  <style>
+    /**
+     * Grid items
+     */
+     #tiles li {
+      -webkit-transition: all 0.3s ease-out;
+      -moz-transition: all 0.3s ease-out;
+      -o-transition: all 0.3s ease-out;
+      transition: all 0.3s ease-out;
+    }
+  </style>
+
+</head>
+
+<body>
+
+<!--sidebar-->
+  <div class="wrapper">
+    <!--content-->
+    <div id="open-sb" class="menu-icon menu-button menu-left"><img src="simple-sidebar/118.png" alt=""></div>
+  </div>
+
+  <section class="sidebar">
+   <style type="text/css">
+    .sidebar {
+      background-color:   #2a2a2a;
+      color: white;
+      font-size: 20px;
+      /*text-align: left;*/
+    }
+
+
+    a { text-decoration: none; }
+    /*a:hover { color: #ff0000; }*/
+    a:link { color: white; }
+    a:hover { color: #ff0000; }
+
+  </style>
+  <nav>
+    <h3>Girls in Aizu</h3>
+    <ul>
+      <li><a href="index.html">Garelly</a></li>
+      <li><a href="">Staff</a></li>
+    </ul>
+
+    <hr>      
+<!--       <ul>
+        <li>Link</li>
+      </ul>
+    --> 
+  </nav>
+</section>
+<!--sidebar-->
+
+
+<div id="container">
+  <header>
+
+  </header>
+  <br/>
+
+  <div id="main" role="main">
+
+    <ul id="tiles">
+      <li>
+        <a href="./sample-images/DSC_00301.jpg" rel="lightbox">
+          <img src="./sample-small-images/DSC_0030.jpg" width="400">
+        </a>
+      </li>
+
+    </ul>
+
+  </div>
+</div>
+
+<!-- include jQuery -->
+<script src="./libs/jquery.min.js"></script>
+
+<!-- Include the imagesLoaded plug-in -->
+<script src="./libs/jquery.imagesloaded.js"></script>
+
+<!-- Include the plug-in -->
+<script src="./libs/jquery.wookmark.js"></script>
+
+<!-- Once the page is loaded, initalize the plug-in. -->
+<script type="text/javascript">
+  (function ($){
+    $('#tiles').imagesLoaded(function() {
+      function comparatorIsStamped(a, b) {
+        var $a = $(a), $b = $(b);
+          // Check if tile should be the first one
+          if (!$a.hasClass('stamped-first') && $b.hasClass('stamped-first'))
+            return 1;
+          // Check if tile should be the last one
+          if ($a.hasClass('stamped-last') && !$b.hasClass('stamped-last'))
+            return 1;
+          // Check if tile should the fourth one
+          if (!$a.hasClass('stamped-fourth') && $b.hasClass('stamped-fourth') && $a.index() >= 4)
+            return 1;
+          return -1;
+        }
+
+        // Prepare layout options.
+        var options = {
+          autoResize: true, // This will auto-update the layout when the browser window is resized.
+          container: $('#main'), // Optional, used for some extra CSS styling
+          offset: 2, // Optional, the distance between grid items
+          itemWidth: 210, // Optional, the width of a grid item
+          comparator: comparatorIsStamped, // Used to sort the items
+          direction: 'left' // Set this to 'right' if you want to stamp the 'stamped-first' item to the right
+        };
+
+        // Get a reference to your grid items.
+        var $handler = $('#tiles li');
+
+        $handler.each(function(i) {
+          console.log($(this).index() + ':' + $(this).find('p').text());
+        });
+
+        // Call the layout function.
+        $handler.wookmark(options);
+      });
+})(jQuery);
+
+</script>
+
+
+
+<!-- simple-sidebar -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+<script src="simple-sidebar/dist/jquery.simplesidebar.min.js"></script>
+
+<script>
+  $( ".sidebar" ).simpleSidebar({
+    settings: {
+      opener: "#open-sb",
+      wrapper: ".wrapper",
+      animation: {
+        easing: "easeOutQuint"
+      }
+    },
+    sidebar: {
+      align: "left",
+      width: 200,
+      closingLinks: 'a',
+    }
+  });
+</script>
+<!-- simple-sidebar -->
+
+</body>
+</html>
