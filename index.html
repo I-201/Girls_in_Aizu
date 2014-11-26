@@ -36,36 +36,42 @@
 
 <body>
 
-<!--sidebar-->
+  <!--sidebar-->
   <div class="wrapper">
     <!--content-->
-    <div id="open-sb" class="menu-icon menu-button menu-left"><img src="simple-sidebar/118.png" alt=""></div>
-  </div>
 
-  <section class="sidebar">
-   <style type="text/css">
-    .sidebar {
-      background-color:   #2a2a2a;
-      color: white;
-      font-size: 20px;
-      /*text-align: left;*/
+    <!--menu-icon-->
+    <div class="sidebar-icon"> 
+      <img src="simple-sidebar/118.png" id="open-sb" class="menu-icon menu-button menu-left">
+<!--<style type="text/css">
+      .sidebar-icon {
+      position: fixed; 
     }
+  </style> -->
+</div>
+</div>
 
+<section class="sidebar">
+ <style type="text/css">
+  .sidebar {
+    background-color:   #2a2a2a;
+    color: white;
+    font-size: 20px;
+  }
 
-    a { text-decoration: none; }
-    /*a:hover { color: #ff0000; }*/
-    a:link { color: white; }
-    a:hover { color: #ff0000; }
+  a { text-decoration: none; }
+  a:link { color: white; }
+  a:hover { color: #ff0000; }
 
-  </style>
-  <nav>
-    <h3>Girls in Aizu</h3>
-    <ul>
-      <li><a href="">Garelly</a></li>
-      <li><a href="staff.html">Staff</a></li>
-    </ul>
+</style>
+<nav>
+  <h3>Girls in Aizu</h3>
+  <ul>
+    <li><a href="">Garelly</a></li>
+    <li><a href="staff.html">Staff</a></li>
+  </ul>
 
-    <hr>      
+  <hr>      
 <!--       <ul>
         <li>Link</li>
       </ul>
@@ -278,7 +284,17 @@
     </ul>
 
   </div>
+  <hr>
+  <aside>
+    <ul>
+      <iframe src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Fpages%2FCute-Girls-in-Aizu%2F726746727416543&amp;width&amp;height=290&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:290px;" allowTransparency="true"></iframe>
+
+    </ul>
+  </aside>
+
 </div>
+
+
 
 <!-- include jQuery -->
 <script src="./libs/jquery.min.js"></script>
@@ -330,8 +346,6 @@
 })(jQuery);
 
 </script>
-
-
 
 <!-- simple-sidebar -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
